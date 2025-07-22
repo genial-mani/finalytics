@@ -1,8 +1,14 @@
 import {prisma} from "@/utils/PrismaClient";
 import { NextResponse, type NextRequest } from "next/server";
 
+type Context = {
+    params: {
+        id: string;
+    }
+}
 
-export async function GET(req: NextRequest, context: {params: {id: string}}) {
+
+export async function GET(req: NextRequest, context: { params: Promise<{ id: string }> }) {
     const { id } = await context.params;
     console.log("Fetching transaction with ID:", id);
     if (!id) {
@@ -23,7 +29,7 @@ export async function GET(req: NextRequest, context: {params: {id: string}}) {
 }
 
 
-export async function PUT(req: NextRequest, context: {params: {id: string}}) {
+export async function PUT(req: NextRequest, context: { params: Promise<{ id: string }> }) {
     const data = await req.json()
     const { id } = await context.params;
     console.log("Received data for update:", data);
@@ -58,7 +64,7 @@ export async function PUT(req: NextRequest, context: {params: {id: string}}) {
     }
 }
 
-export async function DELETE(req: NextRequest, context: {params: {id: string}}) {
+export async function DELETE(req: NextRequest, context: { params: Promise<{ id: string }> }) {
     const { id } = await context.params;
     try {
         if (!id) {

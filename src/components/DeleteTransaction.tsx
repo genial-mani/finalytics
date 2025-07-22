@@ -71,7 +71,7 @@ export const DeleteTransaction = ({
         onSubmit={handleSubmit}
       >
         <DialogTrigger asChild>
-          <Button variant="outline" className="">
+          <Button variant="outline" className="cursor-pointer">
             <Icon icon="mdi:delete" width={20} height={20} />
           </Button>
         </DialogTrigger>

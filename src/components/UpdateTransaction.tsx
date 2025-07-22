@@ -100,7 +100,7 @@ export const UpdateTransaction = ({
         onSubmit={handleSubmit}
       >
         <DialogTrigger asChild>
-          <Button variant="outline" className="">
+          <Button variant="outline" className="cursor-pointer">
             <Icon
               icon="tdesign:edit-filled"
               width={20}
