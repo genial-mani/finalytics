@@ -2,8 +2,8 @@ import {prisma} from "@/utils/PrismaClient";
 import { NextResponse, type NextRequest } from "next/server";
 
 
-export async function GET(req: NextRequest, {params}: {params: {id: string}}) {
-    const { id } = await params;
+export async function GET(req: NextRequest, context: {params: {id: string}}) {
+    const { id } = await context.params;
     console.log("Fetching transaction with ID:", id);
     if (!id) {
         return NextResponse.json({ error: "Transaction ID is required" }, { status: 400 });
@@ -23,9 +23,9 @@ export async function GET(req: NextRequest, {params}: {params: {id: string}}) {
 }
 
 
-export async function PUT(req: NextRequest, {params}: {params: {id: string}}) {
+export async function PUT(req: NextRequest, context: {params: {id: string}}) {
     const data = await req.json()
-    const { id } = await params;
+    const { id } = await context.params;
     console.log("Received data for update:", data);
     if (!id) {
         return NextResponse.json({ error: "Transaction ID is required" }, { status: 400 });
@@ -58,8 +58,8 @@ export async function PUT(req: NextRequest, {params}: {params: {id: string}}) {
     }
 }
 
-export async function DELETE(req: NextRequest, {params}: {params: Promise<{id: string}>}) {
-    const { id } = await params;
+export async function DELETE(req: NextRequest, context: {params: {id: string}}) {
+    const { id } = await context.params;
     try {
         if (!id) {
             return NextResponse.json({ error: "Transaction ID is required" }, { status: 400 });
