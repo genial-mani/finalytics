@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🪙 Finalytics – AI-Powered Finance Management
 
-First, run the development server:
+Finalytics is a smart finance management web application featuring an intelligent assistant **FinAI 🐼**, who helps you understand your financial habits, gives spending insights, and even chats with you using Gemini AI. With an intuitive dashboard and smart recommendations, Finalytics is your friendly personal finance expert!
+
+## 🔮 Features
+
+- 💡 AI-powered financial insights
+- 📊 Interactive and insightful dashboard
+- 🐼 Chat with FinAI for financial suggestions & summaries
+- 💰 Track transactions and spending behavior
+- 💵 Set monthly budgets
+- 🌙 Dark mode 
+- 📈 Charts-based analytics
+- 📦 Zustand + Prisma for efficient state & DB management
+- 🔐 Secured with environment variables
+## 📦 Tech Stack
+
+**Client:** React 19, Next.js 15 (Turbopack), TypeScript, TailwindCSS, Zustand, ShadcnUI  
+**Server:** Node.js, TypeScript, Prisma, MongoDB  
+**AI:** Google Generative AI (Gemini)  
+**UI Enhancements:** Lucide Icons, Sonner Toasts, Motion Animations  
+## 🌐 Demo
+
+![App Screenshot](https://via.placeholder.com/900x500?text=Finalytics+Dashboard+Preview)
+
+[🔗 Live Demo](https://finalytics-dun.vercel.app/)
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/genial-mani/finalytics.git
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd finalytics
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run this project, you will need to add the following environment variables to your .env file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`DATABASE_URL=your_postgres_database_url`
+
+`GEMINI_API_KEY=your_gemini_api_key`
+
+
+## Optimizations
+
+- Used **zustand** for lightweight global state management
+
+- Debounced inputs for performance in **AI** chat
+
+- **Lazy-loaded** routes and components
+
+- **Tailwind-merge** and **clsx** for optimized styling
+
+- **Gemini AI** handled via efficient POST request caching
+
+## Screenshots
+
+- Screenshot 1
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
