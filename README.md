@@ -22,7 +22,7 @@ Finalytics is a smart finance management web application featuring an intelligen
 **UI Enhancements:** Lucide Icons, Sonner Toasts, Motion Animations  
 ## 🌐 Demo
 
-![App Screenshot](https://via.placeholder.com/900x500?text=Finalytics+Dashboard+Preview)
+![Watch the Demo](https://player.cloudinary.com/embed/?cloud_name=diumsbsrb&public_id=Finalytics_ie4udj&profile=cld-default)
 
 [🔗 Live Demo](https://finalytics-dun.vercel.app/)
 
