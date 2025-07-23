@@ -76,7 +76,8 @@ const Intro2 = () => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1, ease: "linear" }}
+          viewport={{once: true}}
+          transition={{ delay: 1, duration: 1, ease: "linear" }}
         >
           <Image
             alt="finance-headache"
