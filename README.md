@@ -75,10 +75,19 @@ To run this project, you will need to add the following environment variables to
 
 - **Gemini AI** handled via efficient POST request caching
 
-## Screenshots
+## Light House Screenshots
 
-- Screenshot 1
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+- Homepage 
+
+![App Screenshot](https://res.cloudinary.com/diumsbsrb/image/upload/v1753284929/Screenshot_2025-07-23_121714_untcu6.png)
+
+- Transactions Page
+
+![App Screenshot](https://res.cloudinary.com/diumsbsrb/image/upload/v1753284929/Screenshot_2025-07-23_121908_kdjpqq.png)
+
+- Dashboard Page
+
+![App Screenshot](https://res.cloudinary.com/diumsbsrb/image/upload/v1753284929/Screenshot_2025-07-23_121804_q8pkbp.png)
 
 
 ## Acknowledgements
