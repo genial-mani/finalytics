@@ -12,6 +12,7 @@ const Intro2 = () => {
       <motion.p
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{once: true}}
         transition={{ delay: 0.3, duration: 1, ease: "backInOut" }}
         className=" text-center sm:text-xl text-gray-500"
       >
@@ -20,6 +21,7 @@ const Intro2 = () => {
       <motion.p
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{once: true}}
         transition={{ delay: 0.3, duration: 1, ease: "backInOut" }}
         className=" text-center sm:text-xl text-gray-500"
       >
