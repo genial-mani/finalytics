@@ -22,7 +22,10 @@ export type ChartConfigType = {
 };
 
 export function MonthlyCatPieChart() {
-  const [monthYear, setMonthYear] = useState("");
+  const [monthYear, setMonthYear] = useState<{month: number, year: number}>({
+    month: new Date().getMonth(),
+    year: new Date().getFullYear(),
+  });
   const [monthlyCatExp, setMonthlyCatExp] = useState<Record<string, number>>(
     {}
   );

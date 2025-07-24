@@ -13,6 +13,7 @@ import {
 import { Icon } from "@iconify/react";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import { motion } from "motion/react";
 const FinAi = () => {
   const [questions, setQuestions] = useState("");
   const [prompt, setPrompt] = useState("");
@@ -86,7 +87,7 @@ const FinAi = () => {
           </div>
         </DialogTrigger>
         <DialogContent
-          className="custom-scroll overflow-y-scroll h-2/3 overflow-x-hidden text-slate-500 border-0"
+          className="custom-scroll overflow-y-scroll h-2/3 overflow-x-hidden text-slate-500 border-0 z-100"
           style={{
             background:
               "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000",
@@ -100,28 +101,32 @@ const FinAi = () => {
               <ReactMarkdown>{output}</ReactMarkdown>
             ) : loading === false ? (
               <div className="w-full h-fit max-w-full flex flex-row items-center justify-center">
-                <h2 className="text-6xl flex items-baseline justify-center pt-10">
+                <h2 className=" text-2xl sm:text-6xl flex items-center justify-center pt-10">
                 Ask{" "}
+                <div className="flex justify-center items-center">
                 <Icon
                   icon="humbleicons:ai"
-                  width="4rem"
-                  height="4rem"
-                  style={{ color: "#990ef9", marginLeft: "15px" }}
+                  width="3.5rem"
+                  height="3.5rem"
+                  style={{ color: "#990ef9", marginLeft: "10px"}}
                 />
+                </div>
                 FinAI
               </h2>
-                <Image alt={"panda-standing"} className="drop-shadow-[0_0_0_white]" src={'/panada-coding.png'} width={150} height={150} draggable={false}/>
+                <Image alt={"panda-standing"} className="drop-shadow-[0_0_0_white] max-[640px]:size-[100px]" src={'/panada-coding.png'} width={150} height={150} draggable={false}/>
               </div>
               
             ) : (
               <div className="w-full max-w-full flex items-baseline justify-center">
-                <Image
+                <div className="sm:w-[80px] sm:h-[160px] ">
+                  <Image
                   alt="panda-thinking"
                   src={"/panda-thinking.png"}
                   width={200}
                   height={400}
                   draggable={false}
                 />
+                </div>
                 <div className="loader3 relative">
                   <div className="circle1 absolute -left-14 -bottom-0"></div>
                   <div className="circle1 absolute -bottom-0 -left-6"></div>
@@ -130,6 +135,7 @@ const FinAi = () => {
               </div>
             )}
             <div className="flex flex-col gap-3 relative">
+              <motion.div className="size-fit max-[500px]:size-[60px]">
               <Image
                 alt="panda-onwall"
                 src={"/panda-seeing-left.png"}
@@ -138,9 +144,10 @@ const FinAi = () => {
                 draggable={false}
                 className="absolute right-3 bottom-[35px] transform-3d -rotate-z-8 cursor-default"
               />
+              </motion.div>
               <Textarea
                 placeholder="Fin is waiting for your question at the bottom right corner."
-                className="resize-none w-full max-w-full min-h-32 mt-5 border-2"
+                className="resize-none w-full max-w-full min-h-32 mt-5 border-2 max-[450px]:text-sm"
                 value={prompt}
                 onChange={handleChange}
                 autoFocus={true}

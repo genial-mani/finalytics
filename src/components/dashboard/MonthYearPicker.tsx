@@ -11,35 +11,36 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { Card } from "../ui/card";
 
 export function MonthYearPicker({
   monthYear,
   setMonthYear,
 }: {
-  monthYear: string;
-  setMonthYear: React.Dispatch<React.SetStateAction<string>>;
+  monthYear: {month: number, year: number};
+  setMonthYear: React.Dispatch<React.SetStateAction<{month: number, year: number}>>;
 }) {
   const [open, setOpen] = React.useState(false);
-  const now = startOfMonth(new Date());
   const [date, setDate] = React.useState<Date>(
-    monthYear ? startOfMonth(new Date(monthYear)) : now
+    new Date(monthYear.year, monthYear.month, 1)
   );
 
   React.useEffect(() => {
     if (monthYear) {
-      setDate(startOfMonth(new Date(monthYear)));
+      setDate(startOfMonth(new Date(monthYear.year, monthYear.month, 1)));
     } else {
       const now = startOfMonth(new Date());
       setDate(now);
-      setMonthYear(now.toISOString());
+      setMonthYear({month: now.getMonth(), year: now.getFullYear()});
     }
   }, [monthYear]);
 
   const setToday = () => {
     const today = new Date();
     setDate(today);
-    setMonthYear(today.toISOString());
+    setMonthYear({
+      month: today.getMonth(),
+      year: today.getFullYear(),
+    });
   };
 
   return (
@@ -52,7 +53,7 @@ export function MonthYearPicker({
               id="date"
               className="w-48 justify-between font-normal"
             >
-              {monthYear && format(monthYear, "MMM yyyy")}
+              {monthYear && format( new Date(monthYear.year, monthYear.month), "MMM yyyy")}
               <ChevronDownIcon />
             </Button>
           </PopoverTrigger>
@@ -73,7 +74,7 @@ export function MonthYearPicker({
             onMonthChange={(selected) => {
               const monthStart = startOfMonth(selected);
               setDate(monthStart);
-              setMonthYear(monthStart.toISOString());
+              setMonthYear({month: monthStart.getMonth(), year: monthStart.getFullYear()});
               setOpen(false);
             }}
             classNames={{

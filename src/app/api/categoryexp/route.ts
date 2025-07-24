@@ -34,12 +34,9 @@ export async function GET(req: NextRequest){
 
 export async function POST(req: NextRequest) {
     try {
-        const monthyear = await req.json(); //its a date
-        const date = new Date(monthyear)
-        const year = date.getFullYear()
-        const month = date.getMonth()
+        const {month, year} = await req.json(); //its a date
 
-        if (typeof month !== "number" || typeof year !== "number") {
+        if (typeof month !== "number" || typeof year !== "number" || month < 0 || month > 11) {
             return NextResponse.json({ error: "Invalid month or year" }, { status: 400 });
         }
 
