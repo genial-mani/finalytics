@@ -16,10 +16,23 @@ Finalytics is a smart finance management web application featuring an intelligen
 - 🔐 Secured with environment variables
 ## 📦 Tech Stack
 
-**Client:** React 19, Next.js 15 (Turbopack), TypeScript, TailwindCSS, Zustand, ShadcnUI  
-**Server:** Node.js, TypeScript, Prisma, MongoDB  
-**AI:** Google Generative AI (Gemini)  
-**UI Enhancements:** Lucide Icons, Sonner Toasts, Motion Animations  
+Here's a breakdown of the technologies used in this project:
+
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Zustand](https://img.shields.io/badge/Zustand-E8251B?style=for-the-badge&logo=zustand&logoColor=white)](https://zustand-bear.github.io/docs/introduction)
+[![Shadcn/UI](https://img.shields.io/badge/Shadcn%2FUI-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/en)
+[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Google Gemini AI](https://img.shields.io/badge/Google_Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/models/gemini)
+[![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-222222?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+[![Sonner](https://img.shields.io/badge/Sonner-000000?style=for-the-badge&logo=sonner&logoColor=white)](https://sonner.emilkowalski.me/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+
+
 ## 🌐 Demo
 
 ### 🎥 Video
