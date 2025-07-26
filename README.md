@@ -29,7 +29,7 @@ Here's a breakdown of the technologies used in this project:
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Google Gemini AI](https://img.shields.io/badge/Google_Gemini_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/models/gemini)
 [![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-222222?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
-[![Sonner](https://img.shields.io/badge/Sonner-000000?style=for-the-badge&logo=sonner&logoColor=white)](https://sonner.emilkowalski.me/)
+[![Sonner](https://img.shields.io/badge/Sonner-000000?style=for-the-badge&logo=sonner&logoColor=white)](https://sonner.emilkowal.ski/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 
