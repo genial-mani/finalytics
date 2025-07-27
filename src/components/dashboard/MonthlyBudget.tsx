@@ -11,6 +11,7 @@ import { categories } from "@/utils/categories";
 import { Icon } from "@iconify/react";
 import { Card, CardDescription, CardTitle } from "../ui/card";
 import useTransactionStore from "@/hooks/useTransactionStore";
+import Loader from "../Loader";
 
 type Budget = {
   id: string;
@@ -23,14 +24,6 @@ type MonthYear = {
   year: number;
 };
 
-const fetchBudget = async (month: string, year: number): Promise<Budget[]> => {
-  const res = await fetch(`/api/monthlybudget?month=${month}&year=${year}`);
-  if (!res.ok) throw new Error("Failed to fetch budget");
-  const data = await res.json();
-  console.log(data);
-  return data.budget;
-};
-
 const MonthlyBudget = () => {
   const [monthYears, setMonthYears] = useState<MonthYear[]>([]);
   const [selected, setSelected] = useState<MonthYear | null>(null);
@@ -38,6 +31,7 @@ const MonthlyBudget = () => {
   const [open, setOpen] = useState(false);
   const budgets = useTransactionStore((state) => state.budgets);
   const setBudgets = useTransactionStore((state) => state.setBudgets);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetchAllBudgets();
@@ -52,6 +46,22 @@ const MonthlyBudget = () => {
       setMonthYears(fromBudgets);
     }
   }, [budgets]);
+
+  const fetchBudget = async (
+    month: string,
+    year: number
+  ): Promise<Budget[]> => {
+    setIsLoading(true);
+    const res = await fetch(`/api/monthlybudget?month=${month}&year=${year}`);
+    if (!res.ok) {
+      setIsLoading(false)
+      throw new Error("Failed to fetch budget");
+    }
+    const data = await res.json();
+    console.log(data);
+    setIsLoading(false)
+    return data.budget;
+  };
 
   const handleOpen = async (monthYear: MonthYear) => {
     setSelected(monthYear);
@@ -115,7 +125,7 @@ const MonthlyBudget = () => {
                   Budget for {my.month} {my.year}
                 </DialogTitle>
               </DialogHeader>
-              {budget ? (
+              {budget && !isLoading ? (
                 <div>
                   {/* Render budget details here */}
                   {budget.length > 0 ? (
@@ -143,7 +153,7 @@ const MonthlyBudget = () => {
                   )}
                 </div>
               ) : (
-                <div>Loading...</div>
+                <Loader />
               )}
             </DialogContent>
           </Dialog>

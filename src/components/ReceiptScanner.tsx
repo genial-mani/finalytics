@@ -68,7 +68,7 @@ const ReceiptScanner = ({ onScanSuccess }: ReceiptScannerProps) => {
       <Button
         type="button"
         variant="outline"
-        className="w-full"
+        className="w-full cursor-pointer"
         onClick={() => fileInputRef?.current?.click()}
         disabled={isScanning}
       >
