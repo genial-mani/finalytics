@@ -19,6 +19,7 @@ import { CategorySelector } from "./CategorySelector";
 import { toast } from "sonner";
 import { TransactionType } from "@/utils/interfaces";
 import useTransactionStore from "@/hooks/useTransactionStore";
+import ReceiptScanner, { ScannedData } from "./ReceiptScanner";
 
 export const AddTransaction = () => {
   const [formData, setFormData] = useState({
@@ -30,6 +31,15 @@ export const AddTransaction = () => {
   const addTransaction = useTransactionStore((state) => state.addTransaction);
   const isLoading = useTransactionStore((state) => state.isLoading);
   const setIsLoading = useTransactionStore((state) => state.setLoading);
+
+  const handleScanSuccess = (scannedData: ScannedData)=>{
+    setFormData({
+      amount: scannedData.amount || "",
+      date: scannedData.date || "",
+      description: scannedData.description || "",
+      category: scannedData.category || "",
+    })
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -102,6 +112,7 @@ export const AddTransaction = () => {
             <DialogTitle>New Transaction</DialogTitle>
           </DialogHeader>
           <div className="grid gap-4">
+            <ReceiptScanner onScanSuccess={handleScanSuccess}/>
             <div className="grid gap-3">
               <Label htmlFor="amount">Amount</Label>
               <Input

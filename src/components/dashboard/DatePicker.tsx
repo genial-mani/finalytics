@@ -32,6 +32,14 @@ export function DatePicker({
   const [open, setOpen] = React.useState(false);
   const [date, setDate] = React.useState<Date | undefined>(formData?.date ? new Date(formData.date) : undefined);
 
+  React.useEffect(() => {
+    if (formData?.date) {
+      setDate(new Date(formData.date));
+    } else {
+      setDate(undefined);
+    }
+  }, [formData?.date]);
+
   const setToday = () => {
     const today = new Date();
     setDate(today);
