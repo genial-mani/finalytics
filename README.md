@@ -5,16 +5,17 @@ Finalytics is a smart finance management web application featuring an intelligen
 
 ## 🔮 Features
 
-- 💡 AI-powered financial insights
+- 💡 **AI-powered** financial insights
 - 📊 Interactive and insightful dashboard
-- 🐼 Chat with FinAI for financial suggestions & summaries
-- 📷 Scan the receipt for transactions details
+- 🐼 Chat with **FinAI** for financial suggestions & summaries
+- 📷 **Scan** the receipt for transactions details
 - 💰 Track transactions and spending behavior
 - 💵 Set monthly budgets
 - 🌙 Dark mode 
 - 📈 Charts-based analytics
 - 📦 Zustand + Prisma for efficient state & DB management
-- 🔐 Secured with environment variables
+
+
 ## 📦 Tech Stack
 
 Here's a breakdown of the technologies used in this project:
