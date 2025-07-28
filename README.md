@@ -115,3 +115,5 @@ To run this project, you will need to add the following environment variables to
  - [Framer Motion](https://www.framer.com/motion/)
  - [Zustand](https://zustand-demo.pmnd.rs/)
 
+
+## Star the repo if you like 💖
