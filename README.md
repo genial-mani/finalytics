@@ -116,4 +116,4 @@ To run this project, you will need to add the following environment variables to
  - [Zustand](https://zustand-demo.pmnd.rs/)
 
 
-## ⭐ Star the repo if you like 💗
+## ⭐ Star the repo if you like 💓
